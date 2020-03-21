@@ -16,7 +16,7 @@ class Api::V1::FoodPostsController < ApplicationController
 
     def show
         food_post = FoodPost.find(params[:id])
-        render json: FoodpostSerializer.new(foodpost)
+        render json: FoodpostSerializer.new(food_post)
     end
 
     def update

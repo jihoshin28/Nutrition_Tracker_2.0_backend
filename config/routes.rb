@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :exercise_posts
       resources :food_posts
       resources :notes
+      resources :weights
       post '/login', to: 'auth#create'
       get '/current_user', to: 'auth#show'
     end

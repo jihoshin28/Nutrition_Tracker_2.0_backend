@@ -10,7 +10,7 @@ class Api::V1::ExercisePostsController < ApplicationController
         if exercise_post.valid?
             render json: { exercise_post: ExercisePostSerializer.new(exercise_post)}
         else 
-            render json: { error: 'failed to create exercise_post'}
+            render json: { error: 'failed to create exercisepost'}
         end
     end
 
