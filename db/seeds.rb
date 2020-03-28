@@ -7,5 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(first_name: 'Allen', last_name: 'Shin', username: 'geeuho', password: 'jeeho123', password_confirmation: 'jeeho123', age: 28, diet_type: 'null', weight: 190, height: 71, email: 'geeuho@gmail.com', calorie_goal: 1800)
 
-
 Weight.create(current_weight: 180, date: '2020-03-20', user_id: 1)

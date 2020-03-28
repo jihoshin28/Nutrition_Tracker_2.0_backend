@@ -25,7 +25,6 @@ class Api::V1::FoodPostsController < ApplicationController
         render json: { update: params[:id]}
     end
 
-
     def destroy
         food_post = FoodPost.find(params[:id])
         food_post.destroy
