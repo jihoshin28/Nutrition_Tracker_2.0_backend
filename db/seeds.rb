@@ -6,5 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(first_name: 'Allen', last_name: 'Shin', username: 'geeuho', password: 'jeeho123', password_confirmation: 'jeeho123', age: 28, diet_type: 'null', weight: 190, height: 71, email: 'geeuho@gmail.com', calorie_goal: 1800)
+User.create(first_name: 'Jane', last_name: 'Shin', username: 'minkyung', password: 'jeeho123', password_confirmation: 'mk123', age: 27, diet_type: 'null', weight: 120, height: 55, email: 'jayknee@gmail.com', calorie_goal: 1500)
 
 Weight.create(current_weight: 180, date: '2020-03-20', user_id: 1)
