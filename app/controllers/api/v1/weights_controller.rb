@@ -2,7 +2,7 @@ class Api::V1::WeightsController < ApplicationController
     skip_before_action :authorized
     # , only: [:create]
     def index
-        weights = Weight.all
+        weights = Weight.where(query_params)
         # options = {
         #     include: [:pictures]
         # }
@@ -11,11 +11,11 @@ class Api::V1::WeightsController < ApplicationController
 
     def create
         weight = Weight.create(weight_params)
-        if weight.valid?
+        # if weight.valid?
             render json: { weight: WeightSerializer.new(weight) }
-        else
-            render json: { error: 'failed to create weight'}
-        end
+        # else
+        #     render json: { error: 'failed to create weight'}
+        # end
     end
 
     def show
@@ -38,11 +38,11 @@ class Api::V1::WeightsController < ApplicationController
     private
        
     def weight_params
-      params.require(:weight).permit(:current_weight, :date)
+        params.require(:weight).permit(:user_id, :current_weight, :date)
     end
 
     def query_params
-        params.permit(:date, :user_id)
+        params.permit(:date, :weight, :user_id)
     end
 
 end

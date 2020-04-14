@@ -1,4 +1,4 @@
 class WeightSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :weight, :date
+  attributes :current_weight, :date, :user_id
 end
