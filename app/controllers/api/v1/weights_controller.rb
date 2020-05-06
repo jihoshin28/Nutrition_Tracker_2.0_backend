@@ -22,7 +22,7 @@ class Api::V1::WeightsController < ApplicationController
         weight = Weight.find(params[:id])
         render json: WeightSerializer.new(weight)
     end
-
+    
     def update
         weight = Weight.find(params[:id])
         weight.update(user_params)

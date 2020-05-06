@@ -13,7 +13,7 @@
 #
 # Configure Using Gemfile
 # gem 'pg'
-#
+# testing something
 default: &default
   adapter: postgresql
   encoding: unicode
