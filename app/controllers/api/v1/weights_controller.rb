@@ -42,7 +42,7 @@ class Api::V1::WeightsController < ApplicationController
     end
 
     def query_params
-        params.permit(:date, :weight, :user_id)
+        params.permit(:date, :current_weight, :user_id)
     end
 
 end
