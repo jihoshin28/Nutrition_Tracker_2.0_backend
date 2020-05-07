@@ -1,5 +1,5 @@
 class Api::V1::WeightsController < ApplicationController 
-    skip_before_action :authorized
+    # skip_before_action :authorized
     # , only: [:create]
     def index
         weights = Weight.where(query_params)
