@@ -13,7 +13,7 @@
 #
 # Configure Using Gemfile
 # gem 'pg'
-# testing something
+#
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -22,13 +22,8 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  adpater: postgresql
-  encoding: unicode
-  database: nutrition-tracker-7_development
-  pool: 5
-  username: allenshin
-  password:
-  timeout: 5000
+  <<: *default
+  database: Nutrition_Tracker_2_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -61,14 +56,8 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adpater: postgresql
-  encoding: unicode
-  database: nutrition-tracker-7_test
-  pool: 5
-  username: allenshin
-  password:
-  timeout: 5000
-
+  <<: *default
+  database: Nutrition_Tracker_2_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -91,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: nutrition-tracker-7_production
-  username: allenshin
-  password: 
+  database: Nutrition_Tracker_2_production
+  username: Nutrition_Tracker_2
+  password: <%= ENV['NUTRITION_TRACKER_2_DATABASE_PASSWORD'] %>
