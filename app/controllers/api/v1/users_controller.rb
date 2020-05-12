@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController 
-    skip_before_action :authorized, only: [:create, :show]
+    skip_before_action :authorized, only: [:create, :show, :index]
     def index
         users = User.all
         # options = {
@@ -44,8 +44,5 @@ class Api::V1::UsersController < ApplicationController
       params.require(:user).permit(:username, :password, :password_confirmation, :first_name, :last_name, :age, :diet_type, :weight, :height, :email, :gender, :calorie_goal, :bio, :image)
     end
 
-    def query_params
-
-    end
 
 end
