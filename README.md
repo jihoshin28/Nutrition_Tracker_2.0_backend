@@ -1,6 +1,6 @@
 ## Nutrition Tracker Backend Server
 
-This Ruby on Rails app functions as the server for the Nutrition Tracker application. The server tracks posts for each unique user with an account. The application also handles authentication with the JWT gem. 
+This Ruby on Rails app functions as the server for the Nutrition Tracker application, which is a nutrition planner. The server tracks posts for each unique user with an account. The application also handles authentication with the JWT gem. 
 
 ## Data Models
 
